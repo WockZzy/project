@@ -1,0 +1,7 @@
+C:\Users\mf288\OneDrive\Рабочий стол\WindowsFormsApp1\WindowsFormsApp1\obj\Release\WindowsFormsApp1.csproj.SuggestedBindingRedirects.cache
+C:\Users\mf288\OneDrive\Рабочий стол\WindowsFormsApp1\WindowsFormsApp1\obj\Release\WindowsFormsApp1.Form1.resources
+C:\Users\mf288\OneDrive\Рабочий стол\WindowsFormsApp1\WindowsFormsApp1\obj\Release\WindowsFormsApp1.Form2.resources
+C:\Users\mf288\OneDrive\Рабочий стол\WindowsFormsApp1\WindowsFormsApp1\obj\Release\WindowsFormsApp1.Form5.resources
+C:\Users\mf288\OneDrive\Рабочий стол\WindowsFormsApp1\WindowsFormsApp1\obj\Release\WindowsFormsApp1.Form6.resources
+C:\Users\mf288\OneDrive\Рабочий стол\WindowsFormsApp1\WindowsFormsApp1\obj\Release\WindowsFormsApp1.Form7.resources
+C:\Users\mf288\OneDrive\Рабочий стол\WindowsFormsApp1\WindowsFormsApp1\obj\Release\WindowsFormsApp1.csproj.GenerateResource.cache
