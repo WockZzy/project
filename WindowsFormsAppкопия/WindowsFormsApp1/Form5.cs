@@ -54,5 +54,19 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void выходToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+    
+
+    private void назадToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form3 frm3 = new Form3();
+            frm3.Owner = this;
+            frm3.Show();
+            Hide();
+        }
     }
 }

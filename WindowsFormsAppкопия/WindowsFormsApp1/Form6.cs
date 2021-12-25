@@ -115,7 +115,7 @@ namespace WindowsFormsApp1
             string id = dataGridView1.Rows[index].Cells[0].Value.ToString();
             string name = dataGridView1.Rows[index].Cells[1].Value.ToString();
             string svedorod = dataGridView1.Rows[index].Cells[2].Value.ToString();
-            
+
 
             //Создаем соеденение
             string connectionString = "provider=Microsoft.Jet.OLEDB.4.0;Data Source=Database5.mdb";//строка соеденения
@@ -123,7 +123,7 @@ namespace WindowsFormsApp1
 
             //Выполянем запрос к БД
             dbConnection.Open();//открываем соеденение
-            string query = "INSERT INTO people3 VALUES ('" + id + "', '" + name + "', '" + svedorod+"')";//строка запроса
+            string query = "INSERT INTO people3 VALUES ('" + id + "', '" + name + "', '" + svedorod + "')";//строка запроса
             OleDbCommand bCommand = new OleDbCommand(query, dbConnection);//команда
 
             //Выполняем запрос
@@ -139,6 +139,19 @@ namespace WindowsFormsApp1
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void назадToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form4 frm4 = new Form4();
+            frm4.Owner = this;
+            frm4.Show();
+            Hide();
+        }
+
+        private void выходToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

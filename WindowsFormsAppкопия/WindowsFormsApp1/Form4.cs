@@ -420,5 +420,18 @@ namespace WindowsFormsApp1
             frm7.Show();
             Hide();
         }
+
+        private void назадToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form1 frm1 = new Form1();
+            frm1.Owner = this;
+            frm1.Show();
+            Hide();
+        }
+
+        private void выходToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

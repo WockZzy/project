@@ -35,7 +35,28 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
+            string connectionString = "provider=Microsoft.Jet.OLEDB.4.0;Data Source=Database5.mdb";
+            OleDbConnection dbConnection = new OleDbConnection(connectionString);
 
+            dbConnection.Open();
+            string query = "SELECT * FROM people2 WHERE годпостепления  >= #" + DateTime.Parse(textBox1.Text).ToString("yyyy'/'MM'/'dd") + "# AND годпостепления <= #" + "#";
+            OleDbCommand dbCommand = new OleDbCommand(query, dbConnection);
+            OleDbDataReader dbReader = dbCommand.ExecuteReader();
+
+            if (dbReader.HasRows == false)
+            {
+                MessageBox.Show("Ошибка");
+            }
+            else
+            {
+                while (dbReader.Read())
+                {
+                    dataGridView1.Rows.Add(dbReader["Код"], dbReader["ФИО"], dbReader["годпоступления"], dbReader["годокончания"]);
+                }
+            }
+
+            dbReader.Close();
+            dbConnection.Close();
         }
 
         private void button_download_Click(object sender, EventArgs e)

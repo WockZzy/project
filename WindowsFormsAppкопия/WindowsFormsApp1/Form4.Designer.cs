@@ -59,9 +59,14 @@ namespace WindowsFormsApp1
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button6 = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.действияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.назадToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -75,11 +80,9 @@ namespace WindowsFormsApp1
             this.groupBox1.Controls.Add(this.button_update);
             this.groupBox1.Controls.Add(this.button_add);
             this.groupBox1.Controls.Add(this.button_download);
-            this.groupBox1.Location = new System.Drawing.Point(1020, 34);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Location = new System.Drawing.Point(765, 28);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(249, 402);
+            this.groupBox1.Size = new System.Drawing.Size(187, 327);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Действия";
@@ -87,10 +90,9 @@ namespace WindowsFormsApp1
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(59, 359);
-            this.button5.Margin = new System.Windows.Forms.Padding(4);
+            this.button5.Location = new System.Drawing.Point(44, 292);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(117, 34);
+            this.button5.Size = new System.Drawing.Size(88, 28);
             this.button5.TabIndex = 11;
             this.button5.Text = "Удалить";
             this.button5.UseVisualStyleBackColor = true;
@@ -98,10 +100,9 @@ namespace WindowsFormsApp1
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(59, 317);
-            this.button4.Margin = new System.Windows.Forms.Padding(4);
+            this.button4.Location = new System.Drawing.Point(44, 258);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(117, 34);
+            this.button4.Size = new System.Drawing.Size(88, 28);
             this.button4.TabIndex = 10;
             this.button4.Text = "Обновить";
             this.button4.UseVisualStyleBackColor = true;
@@ -109,10 +110,9 @@ namespace WindowsFormsApp1
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(59, 275);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
+            this.button3.Location = new System.Drawing.Point(44, 223);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(117, 34);
+            this.button3.Size = new System.Drawing.Size(88, 28);
             this.button3.TabIndex = 9;
             this.button3.Text = "Добавить";
             this.button3.UseVisualStyleBackColor = true;
@@ -120,10 +120,9 @@ namespace WindowsFormsApp1
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(59, 233);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Location = new System.Drawing.Point(44, 189);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(117, 34);
+            this.button2.Size = new System.Drawing.Size(88, 28);
             this.button2.TabIndex = 8;
             this.button2.Text = "Загрузить";
             this.button2.UseVisualStyleBackColor = true;
@@ -131,10 +130,9 @@ namespace WindowsFormsApp1
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(29, 191);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Location = new System.Drawing.Point(22, 155);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(185, 34);
+            this.button1.Size = new System.Drawing.Size(139, 28);
             this.button1.TabIndex = 7;
             this.button1.Text = "Подродные данные";
             this.button1.UseVisualStyleBackColor = true;
@@ -142,10 +140,9 @@ namespace WindowsFormsApp1
             // 
             // button_delete
             // 
-            this.button_delete.Location = new System.Drawing.Point(59, 149);
-            this.button_delete.Margin = new System.Windows.Forms.Padding(4);
+            this.button_delete.Location = new System.Drawing.Point(44, 121);
             this.button_delete.Name = "button_delete";
-            this.button_delete.Size = new System.Drawing.Size(117, 34);
+            this.button_delete.Size = new System.Drawing.Size(88, 28);
             this.button_delete.TabIndex = 5;
             this.button_delete.Text = "Удалить";
             this.button_delete.UseVisualStyleBackColor = true;
@@ -153,10 +150,9 @@ namespace WindowsFormsApp1
             // 
             // button_update
             // 
-            this.button_update.Location = new System.Drawing.Point(59, 107);
-            this.button_update.Margin = new System.Windows.Forms.Padding(4);
+            this.button_update.Location = new System.Drawing.Point(44, 87);
             this.button_update.Name = "button_update";
-            this.button_update.Size = new System.Drawing.Size(117, 34);
+            this.button_update.Size = new System.Drawing.Size(88, 28);
             this.button_update.TabIndex = 4;
             this.button_update.Text = "Обновить";
             this.button_update.UseVisualStyleBackColor = true;
@@ -164,10 +160,9 @@ namespace WindowsFormsApp1
             // 
             // button_add
             // 
-            this.button_add.Location = new System.Drawing.Point(59, 65);
-            this.button_add.Margin = new System.Windows.Forms.Padding(4);
+            this.button_add.Location = new System.Drawing.Point(44, 53);
             this.button_add.Name = "button_add";
-            this.button_add.Size = new System.Drawing.Size(117, 34);
+            this.button_add.Size = new System.Drawing.Size(88, 28);
             this.button_add.TabIndex = 3;
             this.button_add.Text = "Добавить";
             this.button_add.UseVisualStyleBackColor = true;
@@ -175,10 +170,9 @@ namespace WindowsFormsApp1
             // 
             // button_download
             // 
-            this.button_download.Location = new System.Drawing.Point(59, 23);
-            this.button_download.Margin = new System.Windows.Forms.Padding(4);
+            this.button_download.Location = new System.Drawing.Point(44, 19);
             this.button_download.Name = "button_download";
-            this.button_download.Size = new System.Drawing.Size(117, 34);
+            this.button_download.Size = new System.Drawing.Size(88, 28);
             this.button_download.TabIndex = 2;
             this.button_download.Text = "Загрузить";
             this.button_download.UseVisualStyleBackColor = true;
@@ -196,11 +190,12 @@ namespace WindowsFormsApp1
             this.Column6,
             this.Column7,
             this.Column8});
-            this.dataGridView1.Location = new System.Drawing.Point(41, 34);
+            this.dataGridView1.Location = new System.Drawing.Point(31, 28);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(929, 194);
+            this.dataGridView1.Size = new System.Drawing.Size(697, 158);
             this.dataGridView1.TabIndex = 7;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -273,11 +268,12 @@ namespace WindowsFormsApp1
             this.dataGridViewTextBoxColumn8,
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7});
-            this.dataGridView2.Location = new System.Drawing.Point(41, 248);
+            this.dataGridView2.Location = new System.Drawing.Point(31, 202);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(929, 230);
+            this.dataGridView2.Size = new System.Drawing.Size(697, 187);
             this.dataGridView2.TabIndex = 9;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
@@ -346,31 +342,69 @@ namespace WindowsFormsApp1
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(1049, 444);
-            this.button6.Margin = new System.Windows.Forms.Padding(4);
+            this.button6.Location = new System.Drawing.Point(787, 361);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(185, 45);
+            this.button6.Size = new System.Drawing.Size(139, 37);
             this.button6.TabIndex = 11;
             this.button6.Text = "Список по году поступления";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.действияToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(989, 24);
+            this.menuStrip1.TabIndex = 12;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // действияToolStripMenuItem
+            // 
+            this.действияToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.назадToolStripMenuItem,
+            this.выходToolStripMenuItem});
+            this.действияToolStripMenuItem.Name = "действияToolStripMenuItem";
+            this.действияToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
+            this.действияToolStripMenuItem.Text = "Действия";
+            // 
+            // выходToolStripMenuItem
+            // 
+            this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
+            this.выходToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.выходToolStripMenuItem.Text = "Выход";
+            this.выходToolStripMenuItem.Click += new System.EventHandler(this.выходToolStripMenuItem_Click);
+            // 
+            // назадToolStripMenuItem
+            // 
+            this.назадToolStripMenuItem.Name = "назадToolStripMenuItem";
+            this.назадToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.назадToolStripMenuItem.Text = "Назад";
+            this.назадToolStripMenuItem.Click += new System.EventHandler(this.назадToolStripMenuItem_Click);
+            // 
             // Form4
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.ClientSize = new System.Drawing.Size(1319, 490);
+            this.ClientSize = new System.Drawing.Size(989, 398);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form4";
             this.Text = "Form4";
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -406,5 +440,9 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem действияToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem назадToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem выходToolStripMenuItem;
     }
 }
