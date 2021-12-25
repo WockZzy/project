@@ -135,5 +135,10 @@ namespace WindowsFormsApp1
             //Закрываем соеденение с БД
             dbConnection.Close();
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

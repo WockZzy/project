@@ -30,13 +30,14 @@ namespace WindowsFormsApp1
 
         private void button_download_Click(object sender, EventArgs e)
         
-            {
+        {
                 string connectionString = "provider=Microsoft.Jet.OLEDB.4.0;Data Source=Database5.mdb";
                 OleDbConnection dbConnection = new OleDbConnection(connectionString);
 
                 dbConnection.Open();
                 string query = "SELECT * FROM people";
-                OleDbCommand bCommand = new OleDbCommand(query, dbConnection);
+            string query2 = "SELECT * FROM people2";
+            OleDbCommand bCommand = new OleDbCommand(query, dbConnection);
                 OleDbDataReader dbReader = bCommand.ExecuteReader();
 
                 if (dbReader.HasRows == false)
@@ -47,14 +48,14 @@ namespace WindowsFormsApp1
                 {
                     while (dbReader.Read())
                     {
-                        dataGridView1.Rows.Add(dbReader["Код"], dbReader["ФИО"], dbReader["пол"], dbReader["Дата_рождения"], dbReader["адрес_проживания"], dbReader["телефон"], dbReader["сведения_о_родителях"], dbReader["рабочий_телефон_родителей"]);
+                        dataGridView1.Rows.Add(dbReader["Код"], dbReader["ФИО"], dbReader["год_поступления"], dbReader["год_окончания"]);
                     }
                 }
 
 
                 dbReader.Close();
                 dbConnection.Close();
-            }
+        }
         
 
         private void button_add_Click(object sender, EventArgs e)

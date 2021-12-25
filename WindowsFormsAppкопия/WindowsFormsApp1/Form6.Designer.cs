@@ -42,10 +42,9 @@ namespace WindowsFormsApp1
             // button_download
             // 
             this.button_download.BackColor = System.Drawing.SystemColors.Info;
-            this.button_download.Location = new System.Drawing.Point(351, 417);
-            this.button_download.Margin = new System.Windows.Forms.Padding(4);
+            this.button_download.Location = new System.Drawing.Point(263, 339);
             this.button_download.Name = "button_download";
-            this.button_download.Size = new System.Drawing.Size(117, 34);
+            this.button_download.Size = new System.Drawing.Size(88, 28);
             this.button_download.TabIndex = 5;
             this.button_download.Text = "Загрузить";
             this.button_download.UseVisualStyleBackColor = false;
@@ -58,12 +57,14 @@ namespace WindowsFormsApp1
             this.Column3,
             this.Column2,
             this.Column1});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
+            this.dataGridView1.Location = new System.Drawing.Point(9, 10);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(607, 398);
+            this.dataGridView1.Size = new System.Drawing.Size(455, 323);
             this.dataGridView1.TabIndex = 4;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Column3
             // 
@@ -89,10 +90,9 @@ namespace WindowsFormsApp1
             // button_delete
             // 
             this.button_delete.BackColor = System.Drawing.SystemColors.Info;
-            this.button_delete.Location = new System.Drawing.Point(13, 417);
-            this.button_delete.Margin = new System.Windows.Forms.Padding(4);
+            this.button_delete.Location = new System.Drawing.Point(10, 339);
             this.button_delete.Name = "button_delete";
-            this.button_delete.Size = new System.Drawing.Size(117, 34);
+            this.button_delete.Size = new System.Drawing.Size(88, 28);
             this.button_delete.TabIndex = 6;
             this.button_delete.Text = "Удалить";
             this.button_delete.UseVisualStyleBackColor = false;
@@ -101,10 +101,9 @@ namespace WindowsFormsApp1
             // button_add
             // 
             this.button_add.BackColor = System.Drawing.SystemColors.Info;
-            this.button_add.Location = new System.Drawing.Point(179, 417);
-            this.button_add.Margin = new System.Windows.Forms.Padding(4);
+            this.button_add.Location = new System.Drawing.Point(134, 339);
             this.button_add.Name = "button_add";
-            this.button_add.Size = new System.Drawing.Size(117, 34);
+            this.button_add.Size = new System.Drawing.Size(88, 28);
             this.button_add.TabIndex = 7;
             this.button_add.Text = "Добавить";
             this.button_add.UseVisualStyleBackColor = false;
@@ -112,14 +111,15 @@ namespace WindowsFormsApp1
             // 
             // Form6
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.ClientSize = new System.Drawing.Size(711, 485);
+            this.ClientSize = new System.Drawing.Size(533, 394);
             this.Controls.Add(this.button_add);
             this.Controls.Add(this.button_delete);
             this.Controls.Add(this.button_download);
             this.Controls.Add(this.dataGridView1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form6";
             this.Text = "Form6";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
