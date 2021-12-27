@@ -29,16 +29,17 @@ namespace WindowsFormsApp1
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button_delete = new System.Windows.Forms.Button();
-            this.button_update = new System.Windows.Forms.Button();
-            this.button_add = new System.Windows.Forms.Button();
-            this.button_download = new System.Windows.Forms.Button();
+            this.guna2GradientButton11 = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.guna2GradientButton8 = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.guna2GradientButton9 = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.guna2GradientButton10 = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.guna2GradientButton7 = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.guna2GradientButton6 = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.guna2GradientButton5 = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.guna2GradientButton4 = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.guna2GradientButton3 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,29 +59,29 @@ namespace WindowsFormsApp1
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button6 = new System.Windows.Forms.Button();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.действияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.назадToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2GradientButton2 = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button5);
-            this.groupBox1.Controls.Add(this.button4);
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.button_delete);
-            this.groupBox1.Controls.Add(this.button_update);
-            this.groupBox1.Controls.Add(this.button_add);
-            this.groupBox1.Controls.Add(this.button_download);
-            this.groupBox1.Location = new System.Drawing.Point(765, 28);
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.guna2GradientButton11);
+            this.groupBox1.Controls.Add(this.guna2GradientButton8);
+            this.groupBox1.Controls.Add(this.guna2GradientButton9);
+            this.groupBox1.Controls.Add(this.guna2GradientButton10);
+            this.groupBox1.Controls.Add(this.guna2GradientButton7);
+            this.groupBox1.Controls.Add(this.guna2GradientButton6);
+            this.groupBox1.Controls.Add(this.guna2GradientButton5);
+            this.groupBox1.Controls.Add(this.guna2GradientButton4);
+            this.groupBox1.Controls.Add(this.guna2GradientButton3);
+            this.groupBox1.ForeColor = System.Drawing.Color.White;
+            this.groupBox1.Location = new System.Drawing.Point(765, 51);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(187, 327);
             this.groupBox1.TabIndex = 8;
@@ -88,98 +89,162 @@ namespace WindowsFormsApp1
             this.groupBox1.Text = "Действия";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // button5
+            // guna2GradientButton11
             // 
-            this.button5.Location = new System.Drawing.Point(44, 292);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(88, 28);
-            this.button5.TabIndex = 11;
-            this.button5.Text = "Удалить";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.guna2GradientButton11.CheckedState.Parent = this.guna2GradientButton11;
+            this.guna2GradientButton11.CustomImages.Parent = this.guna2GradientButton11;
+            this.guna2GradientButton11.FillColor = System.Drawing.Color.Maroon;
+            this.guna2GradientButton11.FillColor2 = System.Drawing.Color.Black;
+            this.guna2GradientButton11.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2GradientButton11.ForeColor = System.Drawing.Color.White;
+            this.guna2GradientButton11.HoverState.Parent = this.guna2GradientButton11;
+            this.guna2GradientButton11.Location = new System.Drawing.Point(22, 155);
+            this.guna2GradientButton11.Name = "guna2GradientButton11";
+            this.guna2GradientButton11.ShadowDecoration.Parent = this.guna2GradientButton11;
+            this.guna2GradientButton11.Size = new System.Drawing.Size(139, 32);
+            this.guna2GradientButton11.TabIndex = 37;
+            this.guna2GradientButton11.Text = "Подробные данные о родителях";
+            this.guna2GradientButton11.Click += new System.EventHandler(this.guna2GradientButton11_Click);
             // 
-            // button4
+            // guna2GradientButton8
             // 
-            this.button4.Location = new System.Drawing.Point(44, 258);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(88, 28);
-            this.button4.TabIndex = 10;
-            this.button4.Text = "Обновить";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.guna2GradientButton8.CheckedState.Parent = this.guna2GradientButton8;
+            this.guna2GradientButton8.CustomImages.Parent = this.guna2GradientButton8;
+            this.guna2GradientButton8.FillColor = System.Drawing.Color.Maroon;
+            this.guna2GradientButton8.FillColor2 = System.Drawing.Color.Black;
+            this.guna2GradientButton8.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2GradientButton8.ForeColor = System.Drawing.Color.White;
+            this.guna2GradientButton8.HoverState.Parent = this.guna2GradientButton8;
+            this.guna2GradientButton8.Location = new System.Drawing.Point(46, 51);
+            this.guna2GradientButton8.Name = "guna2GradientButton8";
+            this.guna2GradientButton8.ShadowDecoration.Parent = this.guna2GradientButton8;
+            this.guna2GradientButton8.Size = new System.Drawing.Size(86, 26);
+            this.guna2GradientButton8.TabIndex = 35;
+            this.guna2GradientButton8.Text = "Добавить";
+            this.guna2GradientButton8.Click += new System.EventHandler(this.guna2GradientButton8_Click);
             // 
-            // button3
+            // guna2GradientButton9
             // 
-            this.button3.Location = new System.Drawing.Point(44, 223);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(88, 28);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "Добавить";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.guna2GradientButton9.CheckedState.Parent = this.guna2GradientButton9;
+            this.guna2GradientButton9.CustomImages.Parent = this.guna2GradientButton9;
+            this.guna2GradientButton9.FillColor = System.Drawing.Color.Maroon;
+            this.guna2GradientButton9.FillColor2 = System.Drawing.Color.Black;
+            this.guna2GradientButton9.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2GradientButton9.ForeColor = System.Drawing.Color.White;
+            this.guna2GradientButton9.HoverState.Parent = this.guna2GradientButton9;
+            this.guna2GradientButton9.Location = new System.Drawing.Point(46, 83);
+            this.guna2GradientButton9.Name = "guna2GradientButton9";
+            this.guna2GradientButton9.ShadowDecoration.Parent = this.guna2GradientButton9;
+            this.guna2GradientButton9.Size = new System.Drawing.Size(86, 26);
+            this.guna2GradientButton9.TabIndex = 34;
+            this.guna2GradientButton9.Text = "Обновить";
+            this.guna2GradientButton9.Click += new System.EventHandler(this.guna2GradientButton9_Click);
             // 
-            // button2
+            // guna2GradientButton10
             // 
-            this.button2.Location = new System.Drawing.Point(44, 189);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(88, 28);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Загрузить";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.guna2GradientButton10.CheckedState.Parent = this.guna2GradientButton10;
+            this.guna2GradientButton10.CustomImages.Parent = this.guna2GradientButton10;
+            this.guna2GradientButton10.FillColor = System.Drawing.Color.Maroon;
+            this.guna2GradientButton10.FillColor2 = System.Drawing.Color.Black;
+            this.guna2GradientButton10.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2GradientButton10.ForeColor = System.Drawing.Color.White;
+            this.guna2GradientButton10.HoverState.Parent = this.guna2GradientButton10;
+            this.guna2GradientButton10.Location = new System.Drawing.Point(46, 115);
+            this.guna2GradientButton10.Name = "guna2GradientButton10";
+            this.guna2GradientButton10.ShadowDecoration.Parent = this.guna2GradientButton10;
+            this.guna2GradientButton10.Size = new System.Drawing.Size(86, 32);
+            this.guna2GradientButton10.TabIndex = 33;
+            this.guna2GradientButton10.Text = "Удалить";
+            this.guna2GradientButton10.Click += new System.EventHandler(this.guna2GradientButton10_Click);
             // 
-            // button1
+            // guna2GradientButton7
             // 
-            this.button1.Location = new System.Drawing.Point(22, 155);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(139, 28);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Подродные данные";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.guna2GradientButton7.CheckedState.Parent = this.guna2GradientButton7;
+            this.guna2GradientButton7.CustomImages.Parent = this.guna2GradientButton7;
+            this.guna2GradientButton7.FillColor = System.Drawing.Color.Maroon;
+            this.guna2GradientButton7.FillColor2 = System.Drawing.Color.Black;
+            this.guna2GradientButton7.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2GradientButton7.ForeColor = System.Drawing.Color.White;
+            this.guna2GradientButton7.HoverState.Parent = this.guna2GradientButton7;
+            this.guna2GradientButton7.Location = new System.Drawing.Point(46, 19);
+            this.guna2GradientButton7.Name = "guna2GradientButton7";
+            this.guna2GradientButton7.ShadowDecoration.Parent = this.guna2GradientButton7;
+            this.guna2GradientButton7.Size = new System.Drawing.Size(86, 26);
+            this.guna2GradientButton7.TabIndex = 36;
+            this.guna2GradientButton7.Text = "Загрузить";
+            this.guna2GradientButton7.Click += new System.EventHandler(this.guna2GradientButton7_Click);
             // 
-            // button_delete
+            // guna2GradientButton6
             // 
-            this.button_delete.Location = new System.Drawing.Point(44, 121);
-            this.button_delete.Name = "button_delete";
-            this.button_delete.Size = new System.Drawing.Size(88, 28);
-            this.button_delete.TabIndex = 5;
-            this.button_delete.Text = "Удалить";
-            this.button_delete.UseVisualStyleBackColor = true;
-            this.button_delete.Click += new System.EventHandler(this.button_delete_Click);
+            this.guna2GradientButton6.CheckedState.Parent = this.guna2GradientButton6;
+            this.guna2GradientButton6.CustomImages.Parent = this.guna2GradientButton6;
+            this.guna2GradientButton6.FillColor = System.Drawing.Color.Maroon;
+            this.guna2GradientButton6.FillColor2 = System.Drawing.Color.Black;
+            this.guna2GradientButton6.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2GradientButton6.ForeColor = System.Drawing.Color.White;
+            this.guna2GradientButton6.HoverState.Parent = this.guna2GradientButton6;
+            this.guna2GradientButton6.Location = new System.Drawing.Point(46, 193);
+            this.guna2GradientButton6.Name = "guna2GradientButton6";
+            this.guna2GradientButton6.ShadowDecoration.Parent = this.guna2GradientButton6;
+            this.guna2GradientButton6.Size = new System.Drawing.Size(86, 26);
+            this.guna2GradientButton6.TabIndex = 32;
+            this.guna2GradientButton6.Text = "Загрузить";
+            this.guna2GradientButton6.Click += new System.EventHandler(this.guna2GradientButton6_Click);
             // 
-            // button_update
+            // guna2GradientButton5
             // 
-            this.button_update.Location = new System.Drawing.Point(44, 87);
-            this.button_update.Name = "button_update";
-            this.button_update.Size = new System.Drawing.Size(88, 28);
-            this.button_update.TabIndex = 4;
-            this.button_update.Text = "Обновить";
-            this.button_update.UseVisualStyleBackColor = true;
-            this.button_update.Click += new System.EventHandler(this.button_update_Click);
+            this.guna2GradientButton5.CheckedState.Parent = this.guna2GradientButton5;
+            this.guna2GradientButton5.CustomImages.Parent = this.guna2GradientButton5;
+            this.guna2GradientButton5.FillColor = System.Drawing.Color.Maroon;
+            this.guna2GradientButton5.FillColor2 = System.Drawing.Color.Black;
+            this.guna2GradientButton5.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2GradientButton5.ForeColor = System.Drawing.Color.White;
+            this.guna2GradientButton5.HoverState.Parent = this.guna2GradientButton5;
+            this.guna2GradientButton5.Location = new System.Drawing.Point(46, 225);
+            this.guna2GradientButton5.Name = "guna2GradientButton5";
+            this.guna2GradientButton5.ShadowDecoration.Parent = this.guna2GradientButton5;
+            this.guna2GradientButton5.Size = new System.Drawing.Size(86, 26);
+            this.guna2GradientButton5.TabIndex = 31;
+            this.guna2GradientButton5.Text = "Добавить";
+            this.guna2GradientButton5.Click += new System.EventHandler(this.guna2GradientButton5_Click);
             // 
-            // button_add
+            // guna2GradientButton4
             // 
-            this.button_add.Location = new System.Drawing.Point(44, 53);
-            this.button_add.Name = "button_add";
-            this.button_add.Size = new System.Drawing.Size(88, 28);
-            this.button_add.TabIndex = 3;
-            this.button_add.Text = "Добавить";
-            this.button_add.UseVisualStyleBackColor = true;
-            this.button_add.Click += new System.EventHandler(this.button_add_Click);
+            this.guna2GradientButton4.CheckedState.Parent = this.guna2GradientButton4;
+            this.guna2GradientButton4.CustomImages.Parent = this.guna2GradientButton4;
+            this.guna2GradientButton4.FillColor = System.Drawing.Color.Maroon;
+            this.guna2GradientButton4.FillColor2 = System.Drawing.Color.Black;
+            this.guna2GradientButton4.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2GradientButton4.ForeColor = System.Drawing.Color.White;
+            this.guna2GradientButton4.HoverState.Parent = this.guna2GradientButton4;
+            this.guna2GradientButton4.Location = new System.Drawing.Point(46, 257);
+            this.guna2GradientButton4.Name = "guna2GradientButton4";
+            this.guna2GradientButton4.ShadowDecoration.Parent = this.guna2GradientButton4;
+            this.guna2GradientButton4.Size = new System.Drawing.Size(86, 26);
+            this.guna2GradientButton4.TabIndex = 30;
+            this.guna2GradientButton4.Text = "Обновить";
+            this.guna2GradientButton4.Click += new System.EventHandler(this.guna2GradientButton4_Click);
             // 
-            // button_download
+            // guna2GradientButton3
             // 
-            this.button_download.Location = new System.Drawing.Point(44, 19);
-            this.button_download.Name = "button_download";
-            this.button_download.Size = new System.Drawing.Size(88, 28);
-            this.button_download.TabIndex = 2;
-            this.button_download.Text = "Загрузить";
-            this.button_download.UseVisualStyleBackColor = true;
-            this.button_download.Click += new System.EventHandler(this.button_download_Click);
+            this.guna2GradientButton3.CheckedState.Parent = this.guna2GradientButton3;
+            this.guna2GradientButton3.CustomImages.Parent = this.guna2GradientButton3;
+            this.guna2GradientButton3.FillColor = System.Drawing.Color.Maroon;
+            this.guna2GradientButton3.FillColor2 = System.Drawing.Color.Black;
+            this.guna2GradientButton3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2GradientButton3.ForeColor = System.Drawing.Color.White;
+            this.guna2GradientButton3.HoverState.Parent = this.guna2GradientButton3;
+            this.guna2GradientButton3.Location = new System.Drawing.Point(46, 289);
+            this.guna2GradientButton3.Name = "guna2GradientButton3";
+            this.guna2GradientButton3.ShadowDecoration.Parent = this.guna2GradientButton3;
+            this.guna2GradientButton3.Size = new System.Drawing.Size(86, 32);
+            this.guna2GradientButton3.TabIndex = 29;
+            this.guna2GradientButton3.Text = "Удалить";
+            this.guna2GradientButton3.Click += new System.EventHandler(this.guna2GradientButton3_Click);
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.Maroon;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -190,8 +255,8 @@ namespace WindowsFormsApp1
             this.Column6,
             this.Column7,
             this.Column8});
-            this.dataGridView1.Location = new System.Drawing.Point(31, 28);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Location = new System.Drawing.Point(31, 51);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -257,6 +322,7 @@ namespace WindowsFormsApp1
             // 
             // dataGridView2
             // 
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.Maroon;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column9,
@@ -268,8 +334,8 @@ namespace WindowsFormsApp1
             this.dataGridViewTextBoxColumn8,
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7});
-            this.dataGridView2.Location = new System.Drawing.Point(31, 202);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView2.Location = new System.Drawing.Point(31, 225);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 24;
@@ -340,82 +406,84 @@ namespace WindowsFormsApp1
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             this.dataGridViewTextBoxColumn7.Width = 125;
             // 
-            // button6
+            // guna2Elipse1
             // 
-            this.button6.Location = new System.Drawing.Point(787, 361);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(139, 37);
-            this.button6.TabIndex = 11;
-            this.button6.Text = "Список по году поступления";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.guna2Elipse1.TargetControl = this;
             // 
-            // menuStrip1
+            // guna2GradientButton2
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.действияToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(989, 24);
-            this.menuStrip1.TabIndex = 12;
-            this.menuStrip1.Text = "menuStrip1";
+            this.guna2GradientButton2.CheckedState.Parent = this.guna2GradientButton2;
+            this.guna2GradientButton2.CustomImages.Parent = this.guna2GradientButton2;
+            this.guna2GradientButton2.FillColor = System.Drawing.Color.Maroon;
+            this.guna2GradientButton2.FillColor2 = System.Drawing.Color.Black;
+            this.guna2GradientButton2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2GradientButton2.ForeColor = System.Drawing.Color.White;
+            this.guna2GradientButton2.HoverState.Parent = this.guna2GradientButton2;
+            this.guna2GradientButton2.Location = new System.Drawing.Point(811, 13);
+            this.guna2GradientButton2.Name = "guna2GradientButton2";
+            this.guna2GradientButton2.ShadowDecoration.Parent = this.guna2GradientButton2;
+            this.guna2GradientButton2.Size = new System.Drawing.Size(86, 28);
+            this.guna2GradientButton2.TabIndex = 28;
+            this.guna2GradientButton2.Text = "назад";
+            this.guna2GradientButton2.Click += new System.EventHandler(this.guna2GradientButton2_Click);
             // 
-            // действияToolStripMenuItem
+            // guna2ControlBox1
             // 
-            this.действияToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.назадToolStripMenuItem,
-            this.выходToolStripMenuItem});
-            this.действияToolStripMenuItem.Name = "действияToolStripMenuItem";
-            this.действияToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
-            this.действияToolStripMenuItem.Text = "Действия";
+            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.guna2ControlBox1.FillColor = System.Drawing.Color.Red;
+            this.guna2ControlBox1.HoverState.Parent = this.guna2ControlBox1;
+            this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
+            this.guna2ControlBox1.Location = new System.Drawing.Point(932, 12);
+            this.guna2ControlBox1.Name = "guna2ControlBox1";
+            this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
+            this.guna2ControlBox1.Size = new System.Drawing.Size(45, 29);
+            this.guna2ControlBox1.TabIndex = 27;
             // 
-            // выходToolStripMenuItem
+            // guna2GradientButton1
             // 
-            this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
-            this.выходToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.выходToolStripMenuItem.Text = "Выход";
-            this.выходToolStripMenuItem.Click += new System.EventHandler(this.выходToolStripMenuItem_Click);
-            // 
-            // назадToolStripMenuItem
-            // 
-            this.назадToolStripMenuItem.Name = "назадToolStripMenuItem";
-            this.назадToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.назадToolStripMenuItem.Text = "Назад";
-            this.назадToolStripMenuItem.Click += new System.EventHandler(this.назадToolStripMenuItem_Click);
+            this.guna2GradientButton1.CheckedState.Parent = this.guna2GradientButton1;
+            this.guna2GradientButton1.CustomImages.Parent = this.guna2GradientButton1;
+            this.guna2GradientButton1.FillColor = System.Drawing.Color.Maroon;
+            this.guna2GradientButton1.FillColor2 = System.Drawing.Color.Black;
+            this.guna2GradientButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2GradientButton1.ForeColor = System.Drawing.Color.White;
+            this.guna2GradientButton1.HoverState.Parent = this.guna2GradientButton1;
+            this.guna2GradientButton1.Location = new System.Drawing.Point(787, 384);
+            this.guna2GradientButton1.Name = "guna2GradientButton1";
+            this.guna2GradientButton1.ShadowDecoration.Parent = this.guna2GradientButton1;
+            this.guna2GradientButton1.Size = new System.Drawing.Size(139, 32);
+            this.guna2GradientButton1.TabIndex = 29;
+            this.guna2GradientButton1.Text = "Список студентов по году поступления";
+            this.guna2GradientButton1.Click += new System.EventHandler(this.guna2GradientButton1_Click);
             // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.ClientSize = new System.Drawing.Size(989, 398);
-            this.Controls.Add(this.button6);
+            this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources._1612876942_183_p_krasnii_fon_dlya_fotoshopa_bez_uzorov_231;
+            this.ClientSize = new System.Drawing.Size(989, 422);
+            this.Controls.Add(this.guna2GradientButton1);
+            this.Controls.Add(this.guna2GradientButton2);
+            this.Controls.Add(this.guna2ControlBox1);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form4";
             this.Text = "Form4";
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button_delete;
-        private System.Windows.Forms.Button button_update;
-        private System.Windows.Forms.Button button_add;
-        private System.Windows.Forms.Button button_download;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
@@ -426,10 +494,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
@@ -439,10 +503,18 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem действияToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem назадToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem выходToolStripMenuItem;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton2;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
+        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton3;
+        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton1;
+        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton4;
+        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton5;
+        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton6;
+        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton8;
+        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton9;
+        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton10;
+        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton7;
+        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton11;
     }
 }

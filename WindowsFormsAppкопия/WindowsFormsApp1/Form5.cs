@@ -23,7 +23,12 @@ namespace WindowsFormsApp1
 
         }
 
-        private void button_download_Click(object sender, EventArgs e)
+        private void Form5_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2GradientButton1_Click(object sender, EventArgs e)
         {
             string connectionString = "provider=Microsoft.Jet.OLEDB.4.0;Data Source=Database5.mdb";
             OleDbConnection dbConnection = new OleDbConnection(connectionString);
@@ -50,23 +55,19 @@ namespace WindowsFormsApp1
             dbConnection.Close();
         }
 
-        private void Form5_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void выходToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-    
-
-    private void назадToolStripMenuItem_Click(object sender, EventArgs e)
+        private void guna2GradientButton2_Click(object sender, EventArgs e)
         {
             Form3 frm3 = new Form3();
             frm3.Owner = this;
             frm3.Show();
             Hide();
         }
+
+        private void guna2ControlBox1_Click(object sender, EventArgs e)
+
+        {
+            Application.Exit();
+        }
+
     }
 }

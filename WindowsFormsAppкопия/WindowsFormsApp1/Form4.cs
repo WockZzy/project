@@ -28,16 +28,15 @@ namespace WindowsFormsApp1
 
         }
 
-        private void button_download_Click(object sender, EventArgs e)
-        
+        private void guna2GradientButton7_Click(object sender, EventArgs e)
         {
                 string connectionString = "provider=Microsoft.Jet.OLEDB.4.0;Data Source=Database5.mdb";
                 OleDbConnection dbConnection = new OleDbConnection(connectionString);
 
                 dbConnection.Open();
                 string query = "SELECT * FROM people";
-            string query2 = "SELECT * FROM people2";
-            OleDbCommand bCommand = new OleDbCommand(query, dbConnection);
+            
+                OleDbCommand bCommand = new OleDbCommand(query, dbConnection);
                 OleDbDataReader dbReader = bCommand.ExecuteReader();
 
                 if (dbReader.HasRows == false)
@@ -48,18 +47,19 @@ namespace WindowsFormsApp1
                 {
                     while (dbReader.Read())
                     {
-                        dataGridView1.Rows.Add(dbReader["Код"], dbReader["ФИО"], dbReader["год_поступления"], dbReader["год_окончания"]);
-                    }
+                    dataGridView1.Rows.Add(dbReader["Код"], dbReader["ФИО"], dbReader["пол"], dbReader["Дата_рождения"], dbReader["адрес_проживания"], dbReader["телефон"], dbReader["сведения_о_родителях"], dbReader["рабочий_телефон_родителей"]);
+                }
                 }
 
 
                 dbReader.Close();
                 dbConnection.Close();
         }
-        
 
-        private void button_add_Click(object sender, EventArgs e)
+
+        private void guna2GradientButton8_Click(object sender, EventArgs e)
         {
+        
             //Проверим количество выбранных строк
             if (dataGridView1.SelectedRows.Count != 1)
             {
@@ -113,8 +113,10 @@ namespace WindowsFormsApp1
             dbConnection.Close();
         }
 
-        private void button_update_Click(object sender, EventArgs e)
+        private void guna2GradientButton9_Click(object sender, EventArgs e)
         {
+
+        
             //Проверим количество выбранных строк
             if (dataGridView1.SelectedRows.Count != 1)
             {
@@ -168,8 +170,9 @@ namespace WindowsFormsApp1
             dbConnection.Close();
         }
 
-        private void button_delete_Click(object sender, EventArgs e)
-         {
+        private void guna2GradientButton10_Click(object sender, EventArgs e)
+        {
+
             //Проверим количество выбранных строк
             if (dataGridView1.SelectedRows.Count != 1)
             {
@@ -218,34 +221,42 @@ namespace WindowsFormsApp1
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+
+
+        private void guna2GradientButton1_Click(object sender, EventArgs e)
         {
-            string connectionString = "provider=Microsoft.Jet.OLEDB.4.0;Data Source=Database5.mdb";
-            OleDbConnection dbConnection = new OleDbConnection(connectionString);
 
-            dbConnection.Open();
-            string query = "SELECT * FROM people2";
-            OleDbCommand bCommand = new OleDbCommand(query, dbConnection);
-            OleDbDataReader dbReader = bCommand.ExecuteReader();
-
-            if (dbReader.HasRows == false)
-            {
-                MessageBox.Show("Ошибка");
-            }
-            else
-            {
-                while (dbReader.Read())
-                {
-                    dataGridView2.Rows.Add(dbReader["Код"], dbReader["курс"], dbReader["группа"], dbReader["специальность"], dbReader["отделение"], dbReader["вид"], dbReader["номерстуденческогобилета"], dbReader["годпоступления"], dbReader["годокончания"]);
-                }
-            }
-
-
-            dbReader.Close();
-            dbConnection.Close();
+        
+            Form7 frm7 = new Form7();
+            frm7.Owner = this;
+            frm7.Show();
+            Hide();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+
+
+        private void guna2GradientButton11_Click(object sender, EventArgs e)
+        {
+            Form6 frm6 = new Form6();
+            frm6.Owner = this;
+            frm6.Show();
+            Hide();
+        }
+
+        private void назадToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form1 frm1 = new Form1();
+            frm1.Owner = this;
+            frm1.Show();
+            Hide();
+        }
+
+        private void выходToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void guna2GradientButton3_Click(object sender, EventArgs e)
         {
             //Проверим количество выбранных строк
             if (dataGridView2.SelectedRows.Count != 1)
@@ -258,15 +269,7 @@ namespace WindowsFormsApp1
             int index = dataGridView2.SelectedRows[0].Index;
 
             //Проверим данные в таблицы
-            if (dataGridView2.Rows[index].Cells[0].Value == null ||
-                dataGridView2.Rows[index].Cells[1].Value == null ||
-                dataGridView2.Rows[index].Cells[2].Value == null ||
-                dataGridView2.Rows[index].Cells[3].Value == null ||
-                dataGridView2.Rows[index].Cells[4].Value == null ||
-                dataGridView2.Rows[index].Cells[5].Value == null ||
-                dataGridView2.Rows[index].Cells[6].Value == null ||
-                dataGridView2.Rows[index].Cells[7].Value == null ||
-                dataGridView2.Rows[index].Cells[8].Value == null)
+            if (dataGridView2.Rows[index].Cells[0].Value == null)
             {
                 MessageBox.Show("Не все данные введены!", "Внимание!");
                 return;
@@ -274,14 +277,6 @@ namespace WindowsFormsApp1
 
             //Считаем данные
             string id = dataGridView2.Rows[index].Cells[0].Value.ToString();
-            string kyrs = dataGridView2.Rows[index].Cells[1].Value.ToString();
-            string gruppa = dataGridView2.Rows[index].Cells[2].Value.ToString();
-            string spec = dataGridView2.Rows[index].Cells[3].Value.ToString();
-            string otdel = dataGridView2.Rows[index].Cells[4].Value.ToString();
-            string vid = dataGridView2.Rows[index].Cells[5].Value.ToString();
-            string nomerbeleta = dataGridView2.Rows[index].Cells[6].Value.ToString();
-            string godp = dataGridView2.Rows[index].Cells[7].Value.ToString();
-            string godo = dataGridView2.Rows[index].Cells[8].Value.ToString();
 
             //Создаем соеденение
             string connectionString = "provider=Microsoft.Jet.OLEDB.4.0;Data Source=Database5.mdb";//строка соеденения
@@ -289,20 +284,24 @@ namespace WindowsFormsApp1
 
             //Выполянем запрос к БД
             dbConnection.Open();//открываем соеденение
-            string query = "INSERT INTO people2 VALUES (" + id + ", " +kyrs+ ", " + gruppa + ", '" + spec + "', '" + otdel + "', '" + vid + "', " + nomerbeleta + ", '" + godp + "', '" + godo + "')";//строка запроса
+            string query = "DELETE FROM people2 WHERE Код = " + id;//строка запроса
             OleDbCommand dbCommand = new OleDbCommand(query, dbConnection);//команда
 
             //Выполняем запрос
             if (dbCommand.ExecuteNonQuery() != 1)
                 MessageBox.Show("Ошибка выполнения запроса!", "Ошибка!");
             else
-                MessageBox.Show("Данные добавлены!", "Внимание!");
+            {
+                MessageBox.Show("Данные удалены!", "Внимание!");
+                //Удаляем данные из таблицы в форме
+                dataGridView2.Rows.RemoveAt(index);
+            }
 
             //Закрываем соеденение с БД
             dbConnection.Close();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void guna2GradientButton4_Click(object sender, EventArgs e)
         {
             //Проверим количество выбранных строк
             if (dataGridView2.SelectedRows.Count != 1)
@@ -359,16 +358,7 @@ namespace WindowsFormsApp1
             dbConnection.Close();
         }
 
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Form6 frm6 = new Form6();
-            frm6.Owner = this;
-            frm6.Show();
-            Hide();
-        }
-
-        private void button5_Click(object sender, EventArgs e)
+        private void guna2GradientButton5_Click(object sender, EventArgs e)
         {
             //Проверим количество выбранных строк
             if (dataGridView2.SelectedRows.Count != 1)
@@ -381,7 +371,15 @@ namespace WindowsFormsApp1
             int index = dataGridView2.SelectedRows[0].Index;
 
             //Проверим данные в таблицы
-            if (dataGridView2.Rows[index].Cells[0].Value == null)
+            if (dataGridView2.Rows[index].Cells[0].Value == null ||
+                dataGridView2.Rows[index].Cells[1].Value == null ||
+                dataGridView2.Rows[index].Cells[2].Value == null ||
+                dataGridView2.Rows[index].Cells[3].Value == null ||
+                dataGridView2.Rows[index].Cells[4].Value == null ||
+                dataGridView2.Rows[index].Cells[5].Value == null ||
+                dataGridView2.Rows[index].Cells[6].Value == null ||
+                dataGridView2.Rows[index].Cells[7].Value == null ||
+                dataGridView2.Rows[index].Cells[8].Value == null)
             {
                 MessageBox.Show("Не все данные введены!", "Внимание!");
                 return;
@@ -389,6 +387,14 @@ namespace WindowsFormsApp1
 
             //Считаем данные
             string id = dataGridView2.Rows[index].Cells[0].Value.ToString();
+            string kyrs = dataGridView2.Rows[index].Cells[1].Value.ToString();
+            string gruppa = dataGridView2.Rows[index].Cells[2].Value.ToString();
+            string spec = dataGridView2.Rows[index].Cells[3].Value.ToString();
+            string otdel = dataGridView2.Rows[index].Cells[4].Value.ToString();
+            string vid = dataGridView2.Rows[index].Cells[5].Value.ToString();
+            string nomerbeleta = dataGridView2.Rows[index].Cells[6].Value.ToString();
+            string godp = dataGridView2.Rows[index].Cells[7].Value.ToString();
+            string godo = dataGridView2.Rows[index].Cells[8].Value.ToString();
 
             //Создаем соеденение
             string connectionString = "provider=Microsoft.Jet.OLEDB.4.0;Data Source=Database5.mdb";//строка соеденения
@@ -396,42 +402,52 @@ namespace WindowsFormsApp1
 
             //Выполянем запрос к БД
             dbConnection.Open();//открываем соеденение
-            string query = "DELETE FROM people2 WHERE Код = " + id;//строка запроса
+            string query = "INSERT INTO people2 VALUES (" + id + ", " + kyrs + ", " + gruppa + ", '" + spec + "', '" + otdel + "', '" + vid + "', " + nomerbeleta + ", '" + godp + "', '" + godo + "')";//строка запроса
             OleDbCommand dbCommand = new OleDbCommand(query, dbConnection);//команда
 
             //Выполняем запрос
             if (dbCommand.ExecuteNonQuery() != 1)
                 MessageBox.Show("Ошибка выполнения запроса!", "Ошибка!");
             else
-            {
-                MessageBox.Show("Данные удалены!", "Внимание!");
-                //Удаляем данные из таблицы в форме
-                dataGridView1.Rows.RemoveAt(index);
-            }
+                MessageBox.Show("Данные добавлены!", "Внимание!");
 
             //Закрываем соеденение с БД
             dbConnection.Close();
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void guna2GradientButton6_Click(object sender, EventArgs e)
         {
-            Form7 frm7 = new Form7();
-            frm7.Owner = this;
-            frm7.Show();
-            Hide();
+            string connectionString = "provider=Microsoft.Jet.OLEDB.4.0;Data Source=Database5.mdb";
+            OleDbConnection dbConnection = new OleDbConnection(connectionString);
+
+            dbConnection.Open();
+            string query = "SELECT * FROM people2";
+            OleDbCommand bCommand = new OleDbCommand(query, dbConnection);
+            OleDbDataReader dbReader = bCommand.ExecuteReader();
+
+            if (dbReader.HasRows == false)
+            {
+                MessageBox.Show("Ошибка");
+            }
+            else
+            {
+                while (dbReader.Read())
+                {
+                    dataGridView2.Rows.Add(dbReader["Код"], dbReader["курс"], dbReader["группа"], dbReader["специальность"], dbReader["отделение"], dbReader["вид"], dbReader["номерстуденческогобилета"], dbReader["годпоступления"], dbReader["годокончания"]);
+                }
+            }
+
+
+            dbReader.Close();
+            dbConnection.Close();
         }
 
-        private void назадToolStripMenuItem_Click(object sender, EventArgs e)
+        private void guna2GradientButton2_Click(object sender, EventArgs e)
         {
             Form1 frm1 = new Form1();
             frm1.Owner = this;
             frm1.Show();
             Hide();
-        }
-
-        private void выходToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
     }
 }

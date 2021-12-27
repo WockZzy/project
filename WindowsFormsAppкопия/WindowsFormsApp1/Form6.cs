@@ -18,8 +18,9 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
-        private void button_delete_Click(object sender, EventArgs e)
+        private void guna2GradientButton10_Click(object sender, EventArgs e)
         {
+
             //Проверим количество выбранных строк
             if (dataGridView1.SelectedRows.Count != 1)
             {
@@ -63,8 +64,10 @@ namespace WindowsFormsApp1
             dbConnection.Close();
         }
 
-        private void button_download_Click(object sender, EventArgs e)
+        private void guna2GradientButton7_Click(object sender, EventArgs e)
         {
+
+        
             string connectionString = "provider=Microsoft.Jet.OLEDB.4.0;Data Source=Database5.mdb";
             OleDbConnection dbConnection = new OleDbConnection(connectionString);
 
@@ -90,8 +93,10 @@ namespace WindowsFormsApp1
             dbConnection.Close();
         }
 
-        private void button_add_Click(object sender, EventArgs e)
+        private void guna2GradientButton8_Click(object sender, EventArgs e)
         {
+
+        
             //Проверим количество выбранных строк
             if (dataGridView1.SelectedRows.Count != 1)
             {
@@ -141,17 +146,26 @@ namespace WindowsFormsApp1
 
         }
 
-        private void назадToolStripMenuItem_Click(object sender, EventArgs e)
+        private void guna2GradientButton2_Click(object sender, EventArgs e)
         {
+
+        
             Form4 frm4 = new Form4();
             frm4.Owner = this;
             frm4.Show();
             Hide();
         }
 
-        private void выходToolStripMenuItem_Click(object sender, EventArgs e)
+        private void guna2ControlBox1_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
+
+        private void Form6_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        
     }
 }

@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using System.IO;
 using System.Text;
+using System.Data.OleDb;
 
 namespace WindowsFormsApp1
 {
@@ -25,91 +26,8 @@ namespace WindowsFormsApp1
         }
 
 
-        private void button1_Click(object sender, EventArgs e)
-        {
+        
 
-            string mail = Convert.ToString(textBox3.Text);
-
-            string login = Convert.ToString(textBox1.Text);
-
-            string password = Convert.ToString(textBox2.Text);
-
-            int check = 0;
-            
-
-            string[] lines = File.ReadAllLines("login.txt");
-
-
-            Regex reg = new Regex(@"\b[^_+.+][-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}\b", RegexOptions.IgnoreCase);
-            MatchCollection mc = reg.Matches(mail);
-
-            for (int i = 0; i < lines.Length; i++)
-            {
-                if (login == lines[i])
-                {
-                    MessageBox.Show("Такой пользователь уже зарегестрирован!");
-
-                    login = null;
-                    password = null;
-                    textBox1.Text = null;
-                    textBox2.Text = null;
-
-                    Form2 frm2 = new Form2();
-                    frm2.Owner = this;
-                    frm2.Show();
-                    Hide();
-                }
-
-            }
-
-            if (mc.Count > 0 && login != "" && password != "" && login != null && password != null)
-            {
-                for(int i = 0; i < lines.Length; i++)
-                {
-                    if (login != lines[i])
-                    {
-                        check = 1;
-                    }
-                }
-                
-                if(check == 1)
-                {
-                    MessageBox.Show("Регистрация прошла успешно!");
-
-                    File.AppendAllText("password.txt", password + Environment.NewLine);
-
-
-                    File.AppendAllText("login.txt", login + Environment.NewLine);
-
-                    Form2 frm2 = new Form2();
-                    frm2.Owner = this;
-                    frm2.Show();
-                    Hide();
-                }
-
-
-            }
-
-
-            else if(mc.Count == 0)
-            {
-                MessageBox.Show("Почта указана не верно либо поле пустое!");
-            }
-
-
-            else if(login == "")
-            {
-                MessageBox.Show("Поле логина не должно быть пустым!");
-            }
-
-            else if(password == "")
-            {
-                MessageBox.Show("Поле пароля не должно быть пустым!");
-            }
-
-            
-
-        }
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -136,17 +54,94 @@ namespace WindowsFormsApp1
            
         }
 
-        private void button2_Click(object sender, EventArgs e)
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2CustomRadioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2GradientButton1_Click(object sender, EventArgs e)
+        {
+
+            string login = Convert.ToString(textBox1.Text);
+            string password = Convert.ToString(textBox2.Text);
+            string mail = Convert.ToString(textBox3.Text);
+            int id = Convert.ToInt32(textBox4.Text);
+
+
+            Regex reg = new Regex(@"\b[^_+.+][-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}\b", RegexOptions.IgnoreCase);
+            MatchCollection mc = reg.Matches(mail);
+
+            string connectionString = "provider=Microsoft.Jet.OLEDB.4.0;Data Source=Database5.mdb";//строка соеденения
+            OleDbConnection dbConnection = new OleDbConnection(connectionString);//создаем соеденение
+
+
+            OleDbCommand MyOleDbComm2 = new OleDbCommand();
+            dbConnection.Open();
+
+            MyOleDbComm2.CommandText = "Select логин from LogPas " +
+                                       " Where LogPas.логин='" + textBox1.Text + "'";
+            MyOleDbComm2.Connection = dbConnection;
+
+            var result = MyOleDbComm2.ExecuteScalar();
+
+            dbConnection.Close();
+
+            OleDbCommand MyOleDbComm1 = new OleDbCommand();
+            dbConnection.Open();
+
+            MyOleDbComm1.CommandText = "Select пароль from LogPas " +
+                                       " Where LogPas.пароль='" + textBox2.Text + "'";
+            MyOleDbComm1.Connection = dbConnection;
+
+            var result1 = MyOleDbComm1.ExecuteScalar();
+
+            dbConnection.Close();
+
+
+            if (mc.Count > 0 && result == null && result1 == null && login != "admin" && password != "admin")
+            {
+
+                dbConnection.Open();//открываем соеденение
+                string query = "INSERT INTO LogPas VALUES (" + id + ", '" + login + "', '" + password + "', '" + mail + "')";//строка запроса
+                OleDbCommand dbCommand = new OleDbCommand(query, dbConnection);//команда
+
+                //Выполняем запрос
+                if (dbCommand.ExecuteNonQuery() != 1)
+                    MessageBox.Show("Ошибка выполнения запроса!", "Ошибка!");
+                else
+                    MessageBox.Show("Данные добавлены!", "Внимание!");
+
+                //Закрываем соеденение с БД
+                dbConnection.Close();
+
+            }
+
+            else
+            {
+                MessageBox.Show("Данные введен не верно или такой пользователь уже существует!");
+
+            }
+
+
+        }
+
+        private void guna2GradientButton2_Click(object sender, EventArgs e)
         {
             Form1 frm1 = new Form1();
             frm1.Owner = this;
             frm1.Show();
             Hide();
-        }
-
-        private void Form2_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
