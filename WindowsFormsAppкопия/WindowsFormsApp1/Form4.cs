@@ -235,13 +235,7 @@ namespace WindowsFormsApp1
 
 
 
-        private void guna2GradientButton11_Click(object sender, EventArgs e)
-        {
-            Form6 frm6 = new Form6();
-            frm6.Owner = this;
-            frm6.Show();
-            Hide();
-        }
+        
 
         private void назадToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -448,6 +442,11 @@ namespace WindowsFormsApp1
             frm1.Owner = this;
             frm1.Show();
             Hide();
+        }
+
+        private void Form4_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

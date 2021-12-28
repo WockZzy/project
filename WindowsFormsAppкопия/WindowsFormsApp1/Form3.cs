@@ -72,12 +72,14 @@ namespace WindowsFormsApp1
             dbConnection.Close();
         }
 
-        private void guna2GradientButton3_Click(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
-            Form5 frm5 = new Form5();
-            frm5.Owner = this;
-            frm5.Show();
-            Hide();
+
+        }
+
+        private void Form3_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
